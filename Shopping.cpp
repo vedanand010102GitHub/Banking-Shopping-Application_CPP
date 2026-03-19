@@ -169,7 +169,8 @@ int Shopping :: billing(B::Bank &bank)
         {
                 std :: cout<<"Enter your pswd to authorize/approve payment: ";
                 std :: string password;
-                std :: getline(std::cin, password);
+                password = getHiddenPassword();
+                //std :: getline(std::cin, password);
                 if(bank.processPayment(total_amount, password))
                 {
                         //std :: cout<<"pswd verifying"<<std::endl;
