@@ -1,4 +1,4 @@
-Bank.cpp
+//Bank.cpp
 #include<unistd.h>
 #include<iomanip>
 #include<cstring>
@@ -8,6 +8,61 @@ Bank.cpp
 #include"Bank.h"
 #include"Shopping.h"
 
+//-------------------------------------------------------------------------------------
+//  User-defined Terminal Controller
+//  Controls terminal echo using only system() — no termios, no external headers
+//-------------------------------------------------------------------------------------
+struct TerminalControl
+{
+        static void hideInput()          //turn OFF echo — typed chars won't show
+        {
+                system("stty -echo -icanon");
+        }
+        static void showInput()          //turn ON echo — restore normal terminal
+        {
+                system("stty echo icanon");
+        }
+};
+
+//-------------------------------------------------------------------------------------
+//  User-defined hidden password reader
+//  Reads char-by-char, prints '*' for each character, handles backspace too
+//-------------------------------------------------------------------------------------
+std :: string getHiddenPassword()
+{
+        std :: string password = "";
+        char ch;
+
+        TerminalControl :: hideInput();              //disable terminal echo
+
+        while(true)
+        {
+                ch = getchar();                      //read one character at a time
+
+                if(ch == '\n' || ch == '\r')        //Enter pressed → stop reading
+                {
+                        std :: cout << std :: endl;
+                        break;
+                }
+                else if(ch == 127 || ch == '\b')    //Backspace → erase last *
+                {
+                        if(!password.empty())
+                        {
+                                password.pop_back();
+                                std :: cout << "\b \b" << std :: flush;  //erase * on screen
+                        }
+                }
+                else                                //normal char → store & print *
+                {
+                        password += ch;
+                        std :: cout << '*' << std :: flush;
+                }
+        }
+
+        TerminalControl :: showInput();              //restore terminal echo
+
+        return password;
+}
 //namespace A;
 A :: Bank :: Bank()
 {
@@ -26,8 +81,8 @@ void A :: Bank :: create_acc()
         int Yes;
         char t;
         std::cout << "You must deposit a minimum of 500 rupees to open a new account."<<std::endl;
-        std::cout << "--__--__-_-_-Maintain at least 500 to keep your account active.\n";
-        std::cout << "__--__--_-_-_--__--__--__Would you like to open a new account ?"<<std::endl;
+        std::cout << "Maintain at least 500 to keep your account active.\n";
+        std::cout << "Would you like to open a new account ?"<<std::endl;
 again :
         std::cout << "Press 1 for Yes, 0 for No: \n";
         std::cin >> Yes;
@@ -101,7 +156,8 @@ bool A::Bank::deposit_amt(float a)
 {
         std :: cout <<"Enter your pswd __ to deposit money__ "<<std::endl;
         std :: string password;
-        std :: getline(std::cin, password);
+        password = getHiddenPassword();
+        //std :: getline(std::cin, password);
         char pass_char[100];
         strcpy(pass_char, password.c_str());
         if(verify_pswd(pass_char))
@@ -133,7 +189,8 @@ bool A :: Bank :: withdraw_amt(float b)
 {
         std :: cout<<"Enter your pswd__ to withdraw money__"<<std::endl;
         std :: string password;
-        std :: getline(std::cin, password);
+        password = getHiddenPassword();
+        //std :: getline(std::cin, password);
         char pass_char[100];
         strcpy(pass_char, password.c_str());
         if(!verify_pswd(pass_char))
@@ -173,7 +230,8 @@ bool A :: Bank :: display_data()
 {
         std :: cout<<"Enter your pswd__ to see account details ___ "<<std::endl;
         std :: string password;
-        std :: getline(std::cin, password);
+        password = getHiddenPassword();
+        //std :: getline(std::cin, password);
         char pass_char[100];
         strcpy(pass_char, password.c_str());
         if(verify_pswd(pass_char))
@@ -295,8 +353,12 @@ void Bank::menu()
                                         {
                                                 std :: cout<<"Address details view skipped."<<std::endl;
                                         }
-                                        break;
                                 }
+                                else
+                                {
+                                        std :: cout<<"Incorrect password, try again!!"<<std::endl;
+                                }
+                                break;
                         case 2:
                                 {
                                         float a;
@@ -304,8 +366,8 @@ void Bank::menu()
                                         //std :: cin>>a;
                                         //std :: cin.ignore();
                                         deposit_amt(a);
-                                        break;
                                 }
+                                break;        
                         case 3:
                                 {
                                         std :: cout<<std::endl;
@@ -331,8 +393,8 @@ void Bank::menu()
                                         {
                                                 std :: cout<<"Returning to Bank Menu...!"<<std::endl;
                                         }
-                                        break;
                                 }
+                                break;
                         case 4:
                                 {
                                         float b;
@@ -340,14 +402,16 @@ void Bank::menu()
                                         //std :: cin>>b;
                                         //std :: cin.ignore();
                                         withdraw_amt(b);
-                                        break;
                                 }
+                                break;
+                                
                         case 5:
                                 {
                                         std :: cout<<"Now, its a Time to take an exit from the process"<<std::endl;
                                         exit(0);
-                                        break;
                                 }
+                                break;
+                                
                         default:
                                 std :: cout<<"Please select from the given option\nAnd Try It Again !!"<<std::endl;
                 }
@@ -433,10 +497,6 @@ void Bank :: display_address()
         std :: cout<<"Email ID      : "<<addr.Mail_ID<<std::endl;
         std :: cout<<"Mobile No.    : "<<addr.Mobile_No<<std::endl;
 }
-
-~
-~
-~
 ~
 ~
 ~
