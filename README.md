@@ -21,7 +21,7 @@ Built as part of an **Object-Oriented Programming with C++** course to demonstra
 
 ---
 
-## 🎯 Features at a Glance
+## Features at a Glance
 
 | Module | Feature | Details |
 |--------|---------|---------|
@@ -38,7 +38,7 @@ Built as part of an **Object-Oriented Programming with C++** course to demonstra
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Banking-Shopping-CPP/
@@ -49,14 +49,14 @@ Banking-Shopping-CPP/
 ├── Shopping.h        # Declaration — Shopping class
 ├── Shopping.cpp      # Implementation of Shopping class
 │
-├── BS_Appli.cpp      # 🚀 Entry point — main() driver
+├── BS_Appli.cpp      # Entry point — main() driver
 │
 └── README.md         # You are here
 ```
 
 ---
 
-## 🧱 OOP Concepts Demonstrated
+## OOP Concepts Demonstrated
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -97,14 +97,14 @@ Banking-Shopping-CPP/
 
 ---
 
-## 🔐 Security Design
+##  Security Design
 
 ```
 Every sensitive operation is gated behind password verification:
 
-  deposit()        ──► verify_pswd()     ──► ✅ proceed  /  ❌ deny
-  withdraw()       ──► verify_pswd()     ──► ✅ proceed  /  ❌ deny
-  processPayment() ──► verifyPassword()  ──► ✅ proceed  /  ❌ deny
+  deposit()        ──► verify_pswd()     ──►  proceed  /   deny
+  withdraw()       ──► verify_pswd()     ──►  proceed  /   deny
+  processPayment() ──► verifyPassword()  ──►  proceed  /   deny
 
   + Minimum balance of ₹500 enforced on every withdrawal & payment
   + Password stored as private std::string — never accessible outside class
@@ -112,7 +112,7 @@ Every sensitive operation is gated behind password verification:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - GCC / G++ compiler
@@ -136,7 +136,7 @@ g++ BS_Appli.cpp -o banking_app
 
 ---
 
-## 🖥️ Sample Output
+##  Sample Output
 
 ```
 ==============================================
@@ -182,7 +182,7 @@ Cart cleared. You're all set for a fresh start!
 
 ---
 
-## ⚠️ Known Limitations
+##  Known Limitations
 
 - Cart supports a maximum of **4 items** — change `#define SZ 4` in `Shopping.h` to increase
 - `sleep()` is Linux/macOS only — use `Sleep()` from `<windows.h>` on Windows
@@ -192,7 +192,7 @@ Cart cleared. You're all set for a fresh start!
 
 ---
 
-## 📋 Requirements Checklist
+##📋 Requirements Checklist
 
 - [x] Bank class with account creation, deposit, withdraw, balance display
 - [x] Password verification on all sensitive operations
@@ -205,14 +205,14 @@ Cart cleared. You're all set for a fresh start!
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
-**Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+**Ved Anand**
+- GitHub: [@vedanand010102GitHub]((https://github.com/vedanand010102GitHub/Banking-Shopping-Application_CPP))
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
 
@@ -220,7 +220,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 <div align="center">
 
-⭐ If you found this helpful, consider giving it a star!
+ If you found this helpful, consider giving it a star!
 
 *Mini Project · C++ · Object-Oriented Programming*
 
