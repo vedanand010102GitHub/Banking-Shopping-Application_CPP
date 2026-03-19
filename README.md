@@ -13,7 +13,7 @@
 
 ---
 
-## 📖 Overview
+##  Overview
 
 This mini-project simulates a real-world **Banking and Shopping experience** entirely in the terminal. A user opens a bank account, deposits/withdraws funds with password verification, and seamlessly transitions into a shopping cart — where the total purchase amount is securely deducted from the bank balance.
 
@@ -122,7 +122,7 @@ Every sensitive operation is gated behind password verification:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/Banking-Shopping-CPP.git
+git clone https://github.com/vedanand010102GitHub/Banking-Shopping-CPP.git
 cd Banking-Shopping-CPP
 
 # Compile (BS_Appli.cpp includes the other .cpp files directly)
@@ -160,16 +160,19 @@ Account created successfully with initial deposit of ₹ 500.00 /-
 5. Exit
 Enter your choice: 3
 
-A : Add to Cart        *
-B : Billing            **
-V : View Cart          *******
-...
+A : Add to Cart            
+B : Billing                
+C : Clear Cart             
+D : Delete Item            
+E : Exit                   
+R : Return Back in Bank    
+V : View Cart              
 
 ======== YOUR SHOPPING CART ========
 Product              Price (₹)   Qty   Total Price (₹)
 ------------------------------------------------------------
-Shampoo              200         2     400 /-
-Soap                 50          5     250 /-
+Notebook            200         2     400 /-
+Pen                 50          5     250 /-
 ------------------------------------------------------------
 Total Amount: ₹ 650 /-
 
@@ -192,7 +195,7 @@ Cart cleared. You're all set for a fresh start!
 
 ---
 
-##📋 Requirements Checklist
+## Requirements Checklist
 
 - [x] Bank class with account creation, deposit, withdraw, balance display
 - [x] Password verification on all sensitive operations
