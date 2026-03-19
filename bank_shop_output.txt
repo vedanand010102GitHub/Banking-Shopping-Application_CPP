@@ -1,0 +1,302 @@
+		==============================================
+                        BANKING AND SHOPPING APPLICATION
+                ==============================================
+Welcome :: You enetr in Base class of Bank Constructor ++++
+So, for a new person have to create a new account.
+Read the instructions given below and follow it to create a new account
+                ************
+You must deposit a minimum of 500 rupees to open a new account.
+Maintain at least 500 to keep your account active.
+Would you like to open a new account ?
+Press 1 for Yes, 0 for No:
+0
+ See You Later_Thank You !!
+..............................................................................................................................................
+                ==============================================
+                        BANKING AND SHOPPING APPLICATION
+                ==============================================
+Welcome :: You enetr in Base class of Bank Constructor ++++
+So, for a new person have to create a new account.
+Read the instructions given below and follow it to create a new account
+                ************
+
+You must deposit a minimum of 500 rupees to open a new account.
+Maintain at least 500 to keep your account active.
+Would you like to open a new account ?
+Press 1 for Yes, 0 for No:
+1
+Enter the Name:
+Ved Anand
+Set your security/transaction password
+Cp123#
+Account_No generated automatically: 370365580
+Enter the Account_Type:
+Saving Account
+Account created successfully with initial deposit of ₹ 500.00 /- balance.
+Now, You are inside the Derived Bank class of Constructor ++++.
+Enter your/customer full address details
+Enter House_No.: 90
+Enter Landmark: Yellamma Temple
+Enter Full Address: Stanza living, S.R Nagar, 500038
+Enter Your/Customer State: Telangana
+Enter Your/Customer City: Hyderabad
+Enter Your/Customer Zip/Pin/Postal Code: 500038
+Enter Customer Mail_ID: vedanand010102@gmail.com
+Your/Customer Mobile Number will be generated automatically:
+Mobile_No generated automatically:
+
+
+Pick any of the menu option to continue further or else can take exit from process.
+                Pick your choice from below list
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+
+Enter your choice
+1
+Enter your pswd__ to see account details ___
+******
+
+-----*---------------*------
+-----*Account Details*------
+-----*---------------*------
+Name         : Ved Anand
+Account No   : 370365580
+Account Type : Saving Account
+Balance Left : ₹ 500 /-
+
+Do you wannt to view address details? (y/n): y
+Displaying address details...
+
+--------*---------------*---------
+--------*Address Details*---------
+--------*---------------*---------
+House No.     : 90
+Landmark      : Yellamma Temple
+Full Address  : Stanza living, S.R Nagar, 500038
+City          : Hyderabad
+State         : Telangana
+Postal Code   : 500038
+Email ID      : vedanand010102@gmail.com
+Mobile No.    : 9483110761
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+
+Enter your choice again !!
+2
+Enter amount to be deposit__: ₹ 0.00
+Enter your pswd __ to deposit money__
+******
+Enter your amount: ₹ 5000
+++Deposited Amount: Rs 5000
+Added Balance: ₹ 5500
+
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+
+Enter your choice again !!
+4
+Enter amount to withdraw__: ₹ 0.00
+Enter your pswd__ to withdraw money__
+******
+Enter your amount to withdraw: ₹ 100
+*please wait Withdrawl is in process*
+        will get successfull soon
+--Your Withdrawl_Amount : ₹ 100
+**Your Balance_Left : ₹ 5400
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+
+Enter your choice again !!
+3
+
+---*-------------------*---
+---*Proceed to Shopping*---
+---*-------------------*---
+Constructor invoked: you are Inside Shopping class.  ++++
+You’re most welcome!
+We are inside Menu function. Pick any of your choice:
+        A : Add to Cart            *
+        B : Billing                **
+        C : Clear Cart             ***
+        D : Delete Item            ****
+        E : Exit                   *****
+        R : Return Back in Bank    ******
+        V : View Cart              *******
+
+Enter your choice again !!
+A
+Adding of product into basket/cart
+
+Enter Product Name:
+notebook
+Enter Price: ₹
+100
+Enter Quantity: 3
+Item added successfully!
+Item Total: ₹ 300
+        A : Add to Cart            *
+        B : Billing                **
+        C : Clear Cart             ***
+        D : Delete Item            ****
+        E : Exit                   *****
+        R : Return Back in Bank    ******
+        V : View Cart              *******
+
+Enter your choice again !!
+A
+Adding of product into basket/cart
+
+Enter Product Name:
+Pen
+Enter Price: ₹
+25
+Enter Quantity: 4
+Item added successfully!
+Item Total: ₹ 100
+        A : Add to Cart            *
+        B : Billing                **
+        C : Clear Cart             ***
+        D : Delete Item            ****
+        E : Exit                   *****
+        R : Return Back in Bank    ******
+        V : View Cart              *******
+Enter your choice again !!
+A
+Adding of product into basket/cart
+
+Enter Product Name:
+watch
+Enter Price: ₹
+700
+Enter Quantity: 1
+Item added successfully!
+Item Total: ₹ 700
+        A : Add to Cart            *
+        B : Billing                **
+        C : Clear Cart             ***
+        D : Delete Item            ****
+        E : Exit                   *****
+        R : Return Back in Bank    ******
+        V : View Cart              *******
+
+Enter your choice again !!
+V
+
+======== YOUR SHOPPING CART ========
+Product             Price (₹)   Qty     Total Price (₹)
+------------------------------------------------------------
+notebook            100         3       300 /-
+Pen                 25          4       100 /-
+watch               700         1       700 /-
+------------------------------------------------------------
+Total Amount: ₹ 1100 /-
+        A : Add to Cart            *
+        B : Billing                **
+        C : Clear Cart             ***
+        D : Delete Item            ****
+        E : Exit                   *****
+        R : Return Back in Bank    ******
+        V : View Cart              *******
+
+Enter your choice again !!
+D
+Enter product name to delete/remove:
+watch
+Item 'watch'deleted successfully!
+        A : Add to Cart            *
+        B : Billing                **
+        C : Clear Cart             ***
+        D : Delete Item            ****
+        E : Exit                   *****
+        R : Return Back in Bank    ******
+        V : View Cart              *******
+
+Enter your choice again !!
+B
+
+Processing billing...
+
+------*---------------*------
+------*Billing Summary*------
+------*---------------*------
+
+======== YOUR SHOPPING CART ========
+Product             Price (₹)   Qty     Total Price (₹)
+------------------------------------------------------------
+notebook            100         3       300 /-
+Pen                 25          4       100 /-
+------------------------------------------------------------
+Total Amount: ₹ 400 /-
+-wanna proceed with payment? (y/n): y
+Enter your pswd to authorize/approve payment: ******
+pswd verifying
+pswd verified
+fetching account balance/details for transaction
+Payment processed: ₹ 400 /- deducted from your Saving Account.
+Remaining balance: ₹ 5000 /-
+Your cart has been cleared successfully.
+You're all set for a fresh start!
+Billing completed successfully! Returning to Bank Menu...
+Shopping Destructor called! ----
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+Enter your choice again !!
+4
+Enter amount to withdraw__: ₹ 0.00
+Enter your pswd__ to withdraw money__
+***
+Incorrect password !! Withdrawal denied.
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+
+Enter your choice again !!
+4
+Enter amount to withdraw__: ₹ 0.00
+Enter your pswd__ to withdraw money__
+******
+Enter your amount to withdraw: ₹ 2000
+*please wait Withdrawl is in process*
+        will get successfull soon
+--Your Withdrawl_Amount : ₹ 2000
+**Your Balance_Left : ₹ 3000
+        .......................... _
+        1 : Account Details        *
+        2 : Deposit Money          **
+        3 : Proceed to Shopping    ***
+        4 : Withdraw Balance       ****
+        5 : Exit_from_an_appli.    *****
+        .......................... ------
+
+Enter your choice again !!
+5
+Now, its a Time to take an exit from the process
