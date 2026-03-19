@@ -65,4 +65,5 @@ namespace B
                         friend class Shopping;
         };
 }
+std :: string getHiddenPassword();           //user-defined hidden password input
 #endif
